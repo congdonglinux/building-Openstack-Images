@@ -37,13 +37,13 @@ vi /etc/sysconfig/network-script/ifcfg-eth0 :
 ONBOOT=yes
 ```
 
-#Xóa 2 dòng :#
+######Xóa 2 dòng :######
 ```
 HWADDR=xx:xx:xx:xx:xx:xx
 UUID=.....
 ```
 
-# Active network interface
+######Active network interface######
 ```
 ifup eth0
 ```
