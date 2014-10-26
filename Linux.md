@@ -57,7 +57,7 @@ yum install vim openssh-clients rsync -y
 yum update -y 
 ```
 
-# Cài đặt ```cloud-utils-growpart``` để resize đĩa cứng lần đầu boot
+######Cài đặt ```cloud-utils-growpart``` để resize đĩa cứng lần đầu boot######
 ```
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum install cloud-utils-growpart dracut-modules-growroot cloud-init -y
