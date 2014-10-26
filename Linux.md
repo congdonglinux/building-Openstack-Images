@@ -36,7 +36,8 @@ vi /etc/sysconfig/network-script/ifcfg-eth0 :
 
 Xóa 2 dòng :
 ```HWADDR=xx:xx:xx:xx:xx:xx
-UUID=.....```
+UUID=.....
+```
 
 # Active network interface
 ```ifup eth0```
