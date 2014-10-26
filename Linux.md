@@ -3,7 +3,8 @@
 
 Sau khi cài đặt virt-manager xong, các bạn khởi động virt-manager và có giao diện (gần) giống như hình dưới:
 
-[![http://i.imgur.com/cItI7CJ.png](http://i.imgur.com/cItI7CJ.png)]
+![http://i.imgur.com/cItI7CJ.png](http://i.imgur.com/cItI7CJ.png)
+
 
 1.1 Tạo máy ảo
 File => New Virtual Machine => Local Install media (ISO image or CDROM)
