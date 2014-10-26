@@ -4,7 +4,7 @@
 ![http://i.imgur.com/cItI7CJ.png](http://i.imgur.com/cItI7CJ.png)
 
 
-####1.1 Tạo máy ảo####
+#####Tạo máy ảo#####
 File => New Virtual Machine => Local Install media (ISO image or CDROM)
 
 ![http://i.imgur.com/LVjAqmN.png](http://i.imgur.com/LVjAqmN.png)
