@@ -96,7 +96,7 @@ poweroff
 ```
 
 
-##3 Xóa thông tin ‘phần cứng’##
+##3. Xóa thông tin ‘phần cứng’##
 ```
 cd /var/lib/libvirt/images/
 sudo virt-sysprep -a centos6.5.qcow2
@@ -107,5 +107,5 @@ sudo virt-sysprep -a centos6.5.qcow2
 sudo virt-sparsify --compress centos6.5.qcow2 centos6.5.cloud.qcow2
 ```
 
-##4 Upload lên glance##
+##4. Upload lên glance##
 Qúa trình tạo template đã xong, bạn upload file centos6.5.cloud.qcow2 lên Openstack là có thể sử dụng được.
