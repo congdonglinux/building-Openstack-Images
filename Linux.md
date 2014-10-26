@@ -2,7 +2,9 @@
 - Để tạo được máy ảo thì các bạn phải cài đặt libvirt và virt-manager, các bạn có thể tìm các hướng dẫn trên mạng và làm theo, bài viết này mình sẽ bỏ qua phần đó.
 
 Sau khi cài đặt virt-manager xong, các bạn khởi động virt-manager và có giao diện (gần) giống như hình dưới:
-http://i.imgur.com/cItI7CJ.png
+
+[![http://i.imgur.com/cItI7CJ.png](http://i.imgur.com/cItI7CJ.png)]
+
 1.1 Tạo máy ảo
 File => New Virtual Machine => Local Install media (ISO image or CDROM)
 http://i.imgur.com/LVjAqmN.png
