@@ -1,4 +1,4 @@
-1. Tạo máy ảo và cài đặt OS
+##1. Tạo máy ảo và cài đặt OS##
 - Để tạo được máy ảo thì các bạn phải cài đặt libvirt và virt-manager, các bạn có thể tìm các hướng dẫn trên mạng và làm theo, bài viết này mình sẽ bỏ qua phần đó.
 
 Sau khi cài đặt virt-manager xong, các bạn khởi động virt-manager và có giao diện (gần) giống như hình dưới:
@@ -21,7 +21,7 @@ http://i.imgur.com/eny9YbQ.png
 http://i.imgur.com/Bl2DScC.png
 => Begin Installation để bắt đầu quá trình cài đặt. Bạn tiến hành cài đặt như cài server bình thường (Đừng hỏi mình các bước cài đặt OS lên server nhé vì mình ko biết :( ). Có 1 lưu ý khi cài đặt OS đó là lúc chia phân vùng đĩa cứng các bạn sử dụng tòan bộ ổ đĩa cho 'thư mục' ‘/’ và không tạo SWAP Space (Để tối ưu hóa quá trình resize partition lúc tạo máy ảo)
 
-2. Cài đặt các phần mềm cần thiết và update hệ thống
+##2. Cài đặt các phần mềm cần thiết và update hệ thống##
 
 2.1. Cấu hình card eth0 tự động active khi hệ thống boot-up
 vi /etc/sysconfig/network-script/ifcfg-eth0
@@ -35,7 +35,7 @@ UUID=.....
 ifup eth0
 
 
-2.2 Cài đặt phần mềm cần thiết 
+2.2 Cài đặt, cấu hình các  phần mềm cần thiết 
 Ở đây mình sẽ cài thêm 1 số phần mềm cần thiết, các bạn có thể cài đặt bất cứ gì nhưng đừng cài nhiều quá vì các bạn chỉ có 2GB HDD thôi (nếu muôn cài nhiều thì lúc tạo máy ảo, bạn chọn HDD nhiều hơn 1 chút).
 yum install vim openssh-clients rsync -y
 yum update -y 
@@ -70,12 +70,12 @@ yum clean all
 poweroff
 
 
-2.3 Xóa thông tin ‘phần cứng’
+##3 Xóa thông tin ‘phần cứng’##
 cd /var/lib/libvirt/images/
 sudo virt-sysprep -a centos6.5.qcow2
 
 # Reduce image size
 sudo virt-sparsify --compress centos6.5.qcow2 centos6.5.cloud.qcow2
 
-2.4 Upload lên glance
+##4 Upload lên glance##
 Qúa trình tạo template đã xong, bạn upload file centos6.5.cloud.qcow2 lên Openstack là có thể sử dụng được.
