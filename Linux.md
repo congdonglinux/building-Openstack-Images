@@ -38,12 +38,15 @@ ONBOOT=yes
 ```
 
 #Xóa 2 dòng :#
-```HWADDR=xx:xx:xx:xx:xx:xx
+```
+HWADDR=xx:xx:xx:xx:xx:xx
 UUID=.....
 ```
 
 # Active network interface
-```# ifup eth0```
+```
+ifup eth0
+```
 
 
 ####2.2 Cài đặt, cấu hình các  phần mềm cần thiết####
@@ -55,8 +58,10 @@ yum update -y
 ```
 
 # Cài đặt ```cloud-utils-growpart``` để resize đĩa cứng lần đầu boot
-```rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-yum install cloud-utils-growpart dracut-modules-growroot cloud-init -y```
+```
+rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+yum install cloud-utils-growpart dracut-modules-growroot cloud-init -y
+```
 
 Bởi vì ```cloud-utils-growpart``` chỉ tới kernel 3.8 thì mới hỗ trợ update partition tables của đĩa cứng sau khi đã mount nên nếu chỉ cài đặt ```cloud-utils-growpart``` không thì đĩa cứng máy ảo sẽ không được tự động reszie (vì CentOS sử dụng kernel 2.6). Muốn tự động resize thì ta phải thực hiện trước khi kernel được load. Mình sẽ sử dụng initrd để làm việc này. 
 
