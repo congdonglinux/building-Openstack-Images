@@ -43,13 +43,16 @@ UUID=.....
 ```
 
 # Active network interface
-```ifup eth0```
+```# ifup eth0```
 
 
 ####2.2 Cài đặt, cấu hình các  phần mềm cần thiết####
 Ở đây mình sẽ cài thêm 1 số phần mềm cần thiết, các bạn có thể cài đặt bất cứ gì nhưng đừng cài nhiều quá vì các bạn chỉ có 2GB HDD thôi (nếu muôn cài nhiều thì lúc tạo máy ảo, bạn chọn HDD nhiều hơn 1 chút).
-```yum install vim openssh-clients rsync -y
-yum update -y ```
+
+```
+yum install vim openssh-clients rsync -y
+yum update -y 
+```
 
 # Cài đặt ```cloud-utils-growpart``` để resize đĩa cứng lần đầu boot
 ```rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
