@@ -65,36 +65,47 @@ yum install cloud-utils-growpart dracut-modules-growroot cloud-init -y
 
 Bởi vì ```cloud-utils-growpart``` chỉ tới kernel 3.8 thì mới hỗ trợ update partition tables của đĩa cứng sau khi đã mount nên nếu chỉ cài đặt ```cloud-utils-growpart``` không thì đĩa cứng máy ảo sẽ không được tự động reszie (vì CentOS sử dụng kernel 2.6). Muốn tự động resize thì ta phải thực hiện trước khi kernel được load. Mình sẽ sử dụng initrd để làm việc này. 
 
-# Rebuild initrd file
-```dracut -f```
+######Rebuild initrd file######
+```
+dracut -f
+```
 
-# Kiểm tra sau khi rebuild
-```lsinitrd | grep grow
+######Kiểm tra sau khi rebuild######
+```
+lsinitrd | grep grow
 -rwxr-xr-x   1 root     root          133 Nov 22  2013 cmdline/99growroot-dummy.sh
 -rwxr-xr-x   1 root     root         2167 Nov 22  2013 pre-mount/99growroot.sh
 -rwxr-xr-x   1 root     root        16069 Nov 22  2013 usr/bin/growpart
 ```
-# Cấu hình grub để  ‘phun’ log ra cho nova (Output của lệnh : nova get-console-output)
+######Cấu hình grub để  ‘phun’ log ra cho nova (Output của lệnh : nova get-console-output)######
 vim /boot/grub/grub.conf
-Thay phần ```rhgb quiet```
-Bằng : ```console=tty0 console=ttyS0,115200n8```
+######Thay phần###### ```rhgb quiet```
+######Bằng :###### ```console=tty0 console=ttyS0,115200n8```
 
-# Cấu hình cloud-init
+######Cấu hình cloud-init######
 vim /etc/cloud/cloud.cfg
-```disable_root: 0
-ssh_pwauth:   1```
+```
+disable_root: 0
+ssh_pwauth:   1
+```
 
-# Cleaning and Poweroff
-```yum clean all
-poweroff```
+######Cleaning and Poweroff######
+```
+yum clean all
+poweroff
+```
 
 
 ##3 Xóa thông tin ‘phần cứng’##
-```cd /var/lib/libvirt/images/
-sudo virt-sysprep -a centos6.5.qcow2```
+```
+cd /var/lib/libvirt/images/
+sudo virt-sysprep -a centos6.5.qcow2
+```
 
-# Reduce image size
-```sudo virt-sparsify --compress centos6.5.qcow2 centos6.5.cloud.qcow2```
+######Reduce image size######
+```
+sudo virt-sparsify --compress centos6.5.qcow2 centos6.5.cloud.qcow2
+```
 
 ##4 Upload lên glance##
 Qúa trình tạo template đã xong, bạn upload file centos6.5.cloud.qcow2 lên Openstack là có thể sử dụng được.
