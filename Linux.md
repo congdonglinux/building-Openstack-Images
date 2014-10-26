@@ -79,8 +79,8 @@ lsinitrd | grep grow
 ```
 ######Cấu hình grub để  ‘phun’ log ra cho nova (Output của lệnh : nova get-console-output)######
 vim /boot/grub/grub.conf
-######Thay phần###### ```rhgb quiet```
-######Bằng :###### ```console=tty0 console=ttyS0,115200n8```
+######Thay phần ```rhgb quiet```
+######Bằng : ```console=tty0 console=ttyS0,115200n8```
 
 ######Cấu hình cloud-init######
 vim /etc/cloud/cloud.cfg
