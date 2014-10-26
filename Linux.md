@@ -6,20 +6,26 @@
 
 ####1.1 Tạo máy ảo####
 File => New Virtual Machine => Local Install media (ISO image or CDROM)
-http://i.imgur.com/LVjAqmN.png
+![New Virtual Machine](http://i.imgur.com/LVjAqmN.png)
+
 => Use ISO image => Chỉ đến file ISO của CentOS (mình chọn CentOS-6.5-x86_64-minimal.iso)
-http://i.imgur.com/kaOlB4p.png
+
+![Use ISO image](http://i.imgur.com/kaOlB4p.png)
 
 => Điều chỉnh thông số  như RAM, CPU, HDD  cho phù hợp. Ở đây mình chọn 2048MB RAM, 2CPU và 2GB HDD
-http://i.imgur.com/jYBugns.png
+![RAM, CPU, HDD](http://i.imgur.com/jYBugns.png)
+
 
 => Đặt lại tên VM cho dễ nhớ và check vào Customize configuration before install''. Sau đó nó sẽ hiện ra 1 cái (gần) giống như thế này
-http://i.imgur.com/h9Lrjmx.png
+
+![Customize configuration before install](http://i.imgur.com/h9Lrjmx.png)
 
 => Chọn ‘Disk 1’ => Advanced Options => Chọn ‘VirtIO’ tại mục Disk bus => Apply
-http://i.imgur.com/eny9YbQ.png
+![VirtIO](http://i.imgur.com/eny9YbQ.png)
+
 => Chọn ‘NIC :xx:x:xx’ => Chọn ‘virtio’ tại mục Device Model => Apply
-http://i.imgur.com/Bl2DScC.png
+![VirtIO](http://i.imgur.com/Bl2DScC.png)
+
 => Begin Installation để bắt đầu quá trình cài đặt. Bạn tiến hành cài đặt như cài server bình thường (Đừng hỏi mình các bước cài đặt OS lên server nhé vì mình ko biết :( ). Có 1 lưu ý khi cài đặt OS đó là lúc chia phân vùng đĩa cứng các bạn sử dụng tòan bộ ổ đĩa cho 'thư mục' ‘/’ và không tạo SWAP Space (Để tối ưu hóa quá trình resize partition lúc tạo máy ảo)
 
 ##2. Cài đặt các phần mềm cần thiết và update hệ thống##
@@ -38,10 +44,10 @@ UUID=.....```
 
 ####2.2 Cài đặt, cấu hình các  phần mềm cần thiết####
 Ở đây mình sẽ cài thêm 1 số phần mềm cần thiết, các bạn có thể cài đặt bất cứ gì nhưng đừng cài nhiều quá vì các bạn chỉ có 2GB HDD thôi (nếu muôn cài nhiều thì lúc tạo máy ảo, bạn chọn HDD nhiều hơn 1 chút).
-yum install vim openssh-clients rsync -y
-yum update -y 
+```yum install vim openssh-clients rsync -y
+yum update -y ```
 
-# Cài đặt cloud-utils-growpart để resize đĩa cứng lần đầu boot
+# Cài đặt ```cloud-utils-growpart``` để resize đĩa cứng lần đầu boot
 ```rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum install cloud-utils-growpart dracut-modules-growroot cloud-init -y```
 
