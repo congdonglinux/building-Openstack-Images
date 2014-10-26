@@ -6,7 +6,8 @@
 
 ####1.1 Tạo máy ảo####
 File => New Virtual Machine => Local Install media (ISO image or CDROM)
-![New Virtual Machine](http://i.imgur.com/LVjAqmN.png)
+
+![http://i.imgur.com/LVjAqmN.png](http://i.imgur.com/LVjAqmN.png)
 
 => Use ISO image => Chỉ đến file ISO của CentOS (mình chọn CentOS-6.5-x86_64-minimal.iso)
 
