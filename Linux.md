@@ -33,9 +33,11 @@ File => New Virtual Machine => Local Install media (ISO image or CDROM)
 
 ####2.1. Cấu hình card eth0 tự động active khi hệ thống boot-up####
 vi /etc/sysconfig/network-script/ifcfg-eth0 :
-```ONBOOT=yes```
+```
+ONBOOT=yes
+```
 
-Xóa 2 dòng :
+#Xóa 2 dòng :#
 ```HWADDR=xx:xx:xx:xx:xx:xx
 UUID=.....
 ```
