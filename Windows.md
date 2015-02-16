@@ -4,27 +4,27 @@ Tạo template Windows về cơ bản là giống như template Linux, nhưng c�
 - 1 là bạn sử dụng chuẩn giao tiếp đĩa cứng khác như IDE, SCSI, SATA 
 - 2 là cài đặt driver VirtIO trước khi cài Windows. Bài này mình sẽ làm theo cách này.
 
-Chuẩn  bị
+##Chuẩn  bị##
 - 1 máy tính đã cài đặt KVM/QEMU và Virt-manager
 - 1 file ISO Windows bất kỳ (các bạn nên chọn từ Windows Vista trở lên, lý do vì sao sẽ có trong bài). Mình chọn Windows Server 2008 R2 x64.
 - VirtIO Driver (Tải về tại: https://alt.fedoraproject.org/pub/alt/virtio-win/latest/images/virtio-win-0.1-100.iso)
 
-Tạo máy ảo và cài đặt
+#####Tạo máy ảo và cài đặt#####
 ![Imgur](http://i.imgur.com/pGaEP5s.png)
 
-Thêm 1 CD-Rom chứa virtIO Driver cho Windows
+#####Thêm 1 CD-Rom chứa virtIO Driver cho Windows#####
 ![Imgur](http://i.imgur.com/yoa7NIY.png)
 
-Khi cài Windows các bạn sẽ gặp lỗi không tìm thấy ổ cứng như thế này
+#####Khi cài Windows các bạn sẽ gặp lỗi không tìm thấy ổ cứng như thế này#####
 ![Imgur](http://i.imgur.com/0Sa3bRK.png)
 
-Các bạn chọn ‘Load Driver’ và chỉ đường dẫn vào thư mục như hình
+#####Các bạn chọn ‘Load Driver’ và chỉ đường dẫn vào thư mục như hình#####
 ![Imgur](http://i.imgur.com/8Un3Rp8.png)
 
-Chọn tất các các driver mà Windows tìm được
+#####Chọn tất các các driver mà Windows tìm được#####
 ![Imgur](http://i.imgur.com/YEUuZjh.png)
 
-Sau khi cài đặt Driver, Windows sẽ nhận được HDD. Từ đây các bạn có thể cài Windows như bình thường.
+#####Sau khi cài đặt Driver, Windows sẽ nhận được HDD. Từ đây các bạn có thể cài Windows như bình thường.#####
 ![Imgur](http://i.imgur.com/FTFMr4g.png)
 
 Sau khi cài đặt xong, các bạn sẽ boot vào Windows, cài đặt phần mềm tùy theo nhu cầu. Cuối cùng, bạn [download file xml mình chuẩn bị sẵn](https://github.com/vietstacker/building-Openstack-Images/blob/master/Answer%20files/Windows/2008_R2.xml), mục đích của file này là:
