@@ -6,7 +6,7 @@
 
 [Phần 1: Hướng dẫn cách tạo images cho Linux (CentOS 6.5)](https://github.com/d0m0reg00dthing/building-Openstack-Images/blob/master/Linux.md)
 
-[Phần 2: Hướng dẫn cách tạo images cho Windows (Windows Server 2008 R2 Enterprise](https://github.com/vietstacker/building-Openstack-Images/blob/master/Windows.md)
+[Phần 2: Hướng dẫn cách tạo images cho Windows (Windows Server 2008 R2 Enterprise)](https://github.com/vietstacker/building-Openstack-Images/blob/master/Windows.md)
 
 #####Mỗi phần sẽ bao gồm các bước sau:
 - Tạo máy ảo và cặt đặt OS sử dụng libvirt và virt-manager để quản lý bằng GUI
