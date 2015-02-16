@@ -10,22 +10,22 @@ Chuẩn  bị
 - VirtIO Driver (Tải về tại: https://alt.fedoraproject.org/pub/alt/virtio-win/latest/images/virtio-win-0.1-100.iso)
 
 Tạo máy ảo và cài đặt
-[Imgur](http://i.imgur.com/pGaEP5s.png)
+![Imgur](http://i.imgur.com/pGaEP5s.png)
 
 Thêm 1 CD-Rom chứa virtIO Driver cho Windows
-[Imgur](http://i.imgur.com/yoa7NIY.png)
+![Imgur](http://i.imgur.com/yoa7NIY.png)
 
 Khi cài Windows các bạn sẽ gặp lỗi không tìm thấy ổ cứng như thế này
-[Imgur](http://i.imgur.com/0Sa3bRK.png)
+![Imgur](http://i.imgur.com/0Sa3bRK.png)
 
 Các bạn chọn ‘Load Driver’ và chỉ đường dẫn vào thư mục như hình
-[Imgur](http://i.imgur.com/8Un3Rp8.png)
+![Imgur](http://i.imgur.com/8Un3Rp8.png)
 
 Chọn tất các các driver mà Windows tìm được
-[Imgur](http://i.imgur.com/YEUuZjh.png)
+![Imgur](http://i.imgur.com/YEUuZjh.png)
 
 Sau khi cài đặt Driver, Windows sẽ nhận được HDD. Từ đây các bạn có thể cài Windows như bình thường.
-[Imgur](http://i.imgur.com/FTFMr4g.png)
+![Imgur](http://i.imgur.com/FTFMr4g.png)
 
 Sau khi cài đặt xong, các bạn sẽ boot vào Windows, cài đặt phần mềm tùy theo nhu cầu. Cuối cùng, bạn [download file xml mình chuẩn bị sẵn](https://github.com/vietstacker/building-Openstack-Images/blob/master/Answer%20files/Windows/2008_R2.xml), mục đích của file này là:
 - Add key cho Windows
@@ -35,7 +35,7 @@ Sau khi cài đặt xong, các bạn sẽ boot vào Windows, cài đặt phần 
 
 Nếu bạn nào muốn tùy biến thêm thì có thể tham khảo thêm trên Google với từ khóa ‘Windows Unattended files’. Sau khi tải về các bạn lưu file tại “C:\unattend.xml”, mở Command Prompt và gõ lệnh: 
 C:\Windows\System32\sysprep\sysprep.exe /generalize /oobe /shutdown /unattend:C:\unattend.xml
-[Imgur](http://i.imgur.com/jWvijih.png)
+![Imgur](http://i.imgur.com/jWvijih.png)
 
 Bước cuối cùng là upload file image của máy ảo này lên Openstack.
 
