@@ -34,7 +34,7 @@ Sau khi cài đặt xong, các bạn sẽ boot vào Windows, cài đặt phần 
 - Resize OS Partition
 
 Nếu bạn nào muốn tùy biến thêm thì có thể tham khảo thêm trên Google với từ khóa ‘Windows Unattended files’. Sau khi tải về các bạn lưu file tại “C:\unattend.xml”, mở Command Prompt và gõ lệnh: 
-C:\Windows\System32\sysprep\sysprep.exe /generalize /oobe /shutdown /unattend:C:\unattend.xml
+```C:\Windows\System32\sysprep\sysprep.exe /generalize /oobe /shutdown /unattend:C:\unattend.xml```
 ![Imgur](http://i.imgur.com/jWvijih.png)
 
 Bước cuối cùng là upload file image của máy ảo này lên Openstack.
