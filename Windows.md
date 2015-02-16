@@ -41,6 +41,6 @@ C:\Windows\System32\sysprep\sysprep.exe /generalize /oobe /shutdown /unattend:C:
 
 Bước cuối cùng là upload file image của máy ảo này lên Openstack.
 
-Lưu ý:
+##Lưu ý:##
 - Serial trong file xml là mình sử dụng cho bản Windows Server 2008 R2 Enterprise, nếu các bạn sử dụng không đúng key thì quá trình boot máy ảo sẽ gặp vấn đề và các bạn phải tạo lại từ đầu (Không hiểu sao Windows lại ‘kém thông minh’ đến vậy)
 
